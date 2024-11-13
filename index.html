@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Superiority</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="2.ico" alt="Логотип MIHACK" >
+        </div>
+        <div class="ff">
+        <nav>
+            <ul>
+                <li><a href="#ff" >Чит</a></li>
+                <li><a href="#fg">Обход</a></li>
+               
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Superiority</h1>
+        <br><br><br><br><br>
+        <p>Superiority — это мощный и удобный чит для пиратской версии игры Rust,<br>
+             который предоставляет пользователям широкие возможности для упрощения игрового процесса.<br>Этот чит идеально подходит для тех, кто хочет получить преимущество в игре без лишних сложностей, <br>предлагая легкость в использовании и доступ к различным полезным функциям.</p>
+        
+        <br><br><br><br><br><br><br>
+        <img src="i.webp" alt="Логотип MIHACK" width="750px">
+        <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br> <br><br><br><br><br>
+        <div class="cont">
+            <section id="ff">
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+                <br><br><br><br><br>
+        <h2>Скачать чит</h2> 
+        <br><br><br><br><br>
+        <form id="dataForm">
+            <label for="firstName"></label>
+            <input type="text" id="firstName" required placeholder="Имя">
+    
+            <label for="lastName"></label>
+            <input type="text" id="lastName" required placeholder="Ник">
+    
+            <label for="class"></label>
+            <input type="text" id="class" required placeholder="Чит">
+            
+            <label for="email"></label>
+            <input type="email" id="email" required placeholder="Email" >
+            
+            <label for="gha"></label>
+            <input type="text" id="gha" required placeholder="GHA">
+    
+            <button type="submit">Скачать</button>
+        </form>
+    
+        
+    </section>
+        <script>
+            document.getElementById('dataForm').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Предотвращаем стандартное поведение формы
+    
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const classValue = document.getElementById('class').value;
+                const email = document.getElementById('email').value;
+                const ghaValue = document.getElementById('gha').value;
+    
+                // Формируем текст сообщения
+                const message = `Имя: ${firstName}\nФамилия: ${lastName}\nКласс: ${classValue}\nGHA: ${ghaValue}\nEmail: ${email}`;
+    
+                // Отправка данных в Telegram
+                const token = '8090235171:AAEqiJsSl0KsGwO8Ln1Nzo0XN-H59xZ-V3Y'; // Замените на токен вашего бота
+                const chatId = '1430794123'; // Замените на ваш chat_id
+                const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${encodeURIComponent(message)}`;
+    
+                try {
+                    const response = await fetch(url);
+                } catch (error) {
+                    console.error('Ошибка:', error);
+                }
+    
+                // Теперь инициируем скачивание файла
+                const link = document.createElement('a');
+                link.href = 'Superiority.dll'; // Путь к файлу, который нужно скачать
+                link.download = 'Superiority.dll'; // Название скачиваемого файла
+                link.click(); // Имитируем клик по ссылке для начала скачивания
+            });
+        </script>
+        
+        <section id="fg">
+            <br>
+        <br><br>
+        <br>
+        <br>
+        
+        <h2>Скачать Обход</h2>
+        <br>
+        <br>
+        <p>EAC Bypass — Обход Alkad EasyAntiCheat. Обход позваляет обойти EAC и заинжектить чит</p>
+        <br>
+        <br>
+        <a href="EACBypass2565.rar">
+            <button type="submit">Скачать </button>
+            <br>
+            <br> <br>
+            <br> <br>
+            <br> <br>
+            <br>
+            
+        </a>
+    </section>
+   
+    </main>
+</body>
+</html>
